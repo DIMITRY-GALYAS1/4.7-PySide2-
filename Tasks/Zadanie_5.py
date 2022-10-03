@@ -13,12 +13,6 @@ from PySide2.QtWidgets import QWidget, QButtonGroup, QApplication, QPushButton, 
 from PySide2.QtCore import Qt
 
 
-institutes = {
-    'СКФУ': 'Вы поступили в СКФУ',
-    'МИРЭА': 'Вы поступили в МИРЭА',
-    'СтГАУ': 'Вы поступили в СтГАУ'}
-
-
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
@@ -52,6 +46,10 @@ class MainWindow(QWidget):
         self.setLayout(grid)
 
     def clicked_button(self, butn):
+        institutes = {
+            'СКФУ': 'Вы поступили в СКФУ',
+            'МИРЭА': 'Вы поступили в МИРЭА',
+            'СтГАУ': 'Вы поступили в СтГАУ'}
         self.label_1.setText(institutes[butn.text()])
 
 
