@@ -28,9 +28,9 @@ class MainWindow(QWidget):
     def initialization(self):
         self.setGeometry(100, 100, 100, 100)
         self.setWindowTitle("Задание 3")
-        self.displayWidgets()
+        self.display_widgets()
 
-    def displayWidgets(self):
+    def display_widgets(self):
         self.butn1.setStyleSheet("background-color: #ff0000;")
         self.butn1.clicked.connect(self.make_red)
         self.butn2.setStyleSheet("background-color: #ff7d00;")

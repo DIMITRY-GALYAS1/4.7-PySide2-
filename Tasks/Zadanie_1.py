@@ -29,9 +29,9 @@ class MainWindow(QWidget):
     def initialization(self):
         self.setGeometry(100, 100, 400, 230)
         self.setWindowTitle("Задание 1. Калькулятор")
-        self.displayWidgets()
+        self.displa_ywidgets()
 
-    def displayWidgets(self):
+    def display_widgets(self):
         v_box = QVBoxLayout()
         v_box.addWidget(self.label_1)
         v_box.addWidget(self.line_1)
@@ -42,12 +42,12 @@ class MainWindow(QWidget):
         v_box.addWidget(self.butn4)
         v_box.addWidget(self.label_2)
         self.setLayout(v_box)
-        self.butn1.clicked.connect(self.Addition)
-        self.butn2.clicked.connect(self.Subtraction)
-        self.butn3.clicked.connect(self.Multiplication)
-        self.butn4.clicked.connect(self.Division)
+        self.butn1.clicked.connect(self.addition)
+        self.butn2.clicked.connect(self.subtraction)
+        self.butn3.clicked.connect(self.multiplication)
+        self.butn4.clicked.connect(self.division)
 
-    def Addition(self):
+    def addition(self):
         try:
             number_1 = self.line_1.text()
             number_2 = self.line_2.text()
@@ -56,7 +56,7 @@ class MainWindow(QWidget):
         except ValueError:
             self.label_2.setText("Ошибка")
 
-    def Subtraction(self):
+    def subtraction(self):
         try:
             number_1 = self.line_1.text()
             number_2 = self.line_2.text()
@@ -65,7 +65,7 @@ class MainWindow(QWidget):
         except ValueError:
             self.label_2.setText("Ошибка")
 
-    def Division(self):
+    def division(self):
         try:
             number_1 = self.line_1.text()
             number_2 = self.line_2.text()
@@ -76,7 +76,7 @@ class MainWindow(QWidget):
         except ZeroDivisionError:
             self.label_2.setText("Деление на 0")
 
-    def Multiplication(self):
+    def multiplication(self):
         try:
             number_1 = self.line_1.text()
             number_2 = self.line_2.text()

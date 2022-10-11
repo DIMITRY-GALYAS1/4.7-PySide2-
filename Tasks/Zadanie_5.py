@@ -27,9 +27,9 @@ class MainWindow(QWidget):
     def initialization(self):
         self.setGeometry(200, 200, 350, 200)
         self.setWindowTitle("Задание 5")
-        self.displayWidgets()
+        self.display_widgets()
 
-    def displayWidgets(self):
+    def display_widgets(self):
         self.radio_1.setCheckable(True)
         self.radio_2.setCheckable(True)
         self.radio_3.setCheckable(True)
@@ -46,14 +46,14 @@ class MainWindow(QWidget):
         self.setLayout(grid)
 
     def clicked_button(self, butn):
-        institutes = {
-            'СКФУ': 'Вы поступили в СКФУ',
-            'МИРЭА': 'Вы поступили в МИРЭА',
-            'СтГАУ': 'Вы поступили в СтГАУ'}
         self.label_1.setText(institutes[butn.text()])
 
 
 if __name__ == "__main__":
+    institutes = {
+        'СКФУ': 'Вы поступили в СКФУ',
+        'МИРЭА': 'Вы поступили в МИРЭА',
+        'СтГАУ': 'Вы поступили в СтГАУ'}
     application = QApplication(sys.argv)
     window = MainWindow()
     window.show()

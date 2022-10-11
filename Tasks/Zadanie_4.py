@@ -27,9 +27,9 @@ class MainWindow(QWidget):
     def initialization(self):
         self.setGeometry(500, 500, 500, 500)
         self.setWindowTitle("Задание 4")
-        self.displayWidgets()
+        self.display_widgets()
 
-    def displayWidgets(self):
+    def display_widgets(self):
         v_box = QVBoxLayout()
         h_box = QHBoxLayout()
         v_box.addLayout(h_box)
